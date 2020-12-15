@@ -6,6 +6,8 @@ const router = new express.Router()
 // GET /tasks?completed=false
 // GET /tasks?limit=10&skip=20
 // GET /tasks?sortBy=createdAt:desc
+
+// FETCH ALL TASKS FOR THE OWNER
 router.get('/tasks', auth, async (req, res) => {
     const match = {}
     const sort = {}
@@ -35,7 +37,7 @@ router.get('/tasks', auth, async (req, res) => {
     }
 })
 
-
+// CREATE A NEW TASK
 router.post('/tasks', auth, async (req, res) => {
     //const task = new Task(req.body)
     const task = new Task({
@@ -50,7 +52,7 @@ router.post('/tasks', auth, async (req, res) => {
     }
 
 })
-
+// GET A SPECIFIC TASK
 router.get('/tasks/:id', auth, async (req, res) => {
     const _id = req.params.id
     try {

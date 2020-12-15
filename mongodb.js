@@ -35,13 +35,13 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     // })
 
     // --- SAMPLE TO DELETE ONE DOCUMENT ---
-    db.collection('tasks').deleteOne({
-        description: 'wash dishes'
-    }).then((result) => {
-        console.log(result)
-    }).catch((error) => {
-        console.log(error)
-    })
+    // db.collection('tasks').deleteOne({
+    //     description: 'wash dishes'
+    // }).then((result) => {
+    //     console.log(result)
+    // }).catch((error) => {
+    //     console.log(error)
+    // })
 
     // --- SAMPLE TO DELETE MANY DOCUMENT ---
     // db.collection('users').deleteMany({
